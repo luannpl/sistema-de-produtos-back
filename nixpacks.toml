@@ -2,9 +2,7 @@
 
 command = "pip install -r requirements.txt"
 
-[phases.build]
 
-command = "echo 'Build completed'"
 
 
 [phases.start]
