@@ -10,6 +10,10 @@ app = Flask(__name__)
 
 CORS(app)
 
+@app.route('/')
+def home():
+    return 'API Produtos'
+
 @app.route('/produtos', methods=['POST'])
 def cadastrar_produto_route():
     return cadastrar_produto()
