@@ -22,17 +22,17 @@ def cadastrar_produto_route():
 def listar_produtos_route():
     return listar_produtos_controller()
 
-# @app.route('/produtos/<int:id>', methods=['GET'])
-# def buscar_produto_route(id):
-#     return buscar_produto_controller(id)
+@app.route('/produtos/<int:id>', methods=['GET'])
+def buscar_produto_route(id):
+    return buscar_produto_controller(id)
 
-# @app.route('/produtos/<int:id>', methods=['PUT'])
-# def atualizar_produto_route(id):
-#     return atualizar_produto_controller(id)
+@app.route('/produtos/<int:id>', methods=['PUT'])
+def atualizar_produto_route(id):
+    return atualizar_produto_controller(id)
 
-# @app.route('/produtos/<int:id>', methods=['DELETE'])
-# def deletar_produto_route(id):
-#     return deletar_produto_controller(id)
+@app.route('/produtos/<int:id>', methods=['DELETE'])
+def deletar_produto_route(id):
+    return deletar_produto_controller(id)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000,debug=True)

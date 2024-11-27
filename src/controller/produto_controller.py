@@ -6,8 +6,8 @@ from src.model.produto_modal import (
 def cadastrar_produto():
     data = request.get_json()
     nomeProduto = data.get('nomeProduto')
-    preco = data.get('preco')
-    quantidade = data.get('quantidade')
+    preco = data.get('preco', 0)
+    quantidade = data.get('quantidade', 0)
 
     message, status_code = criar_produto(nomeProduto, preco, quantidade)
     return jsonify(message), status_code
