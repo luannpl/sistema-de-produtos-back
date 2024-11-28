@@ -21,9 +21,11 @@ def criar_produto(nomeProduto, preco, quantidade):
         conexao.close()
 
 def listar_produtos():
-    conexao = criar_conexao()
-    cursor = conexao.cursor()
+    conexao = None
+    cursor = None
     try:
+        conexao = criar_conexao()
+        cursor = conexao.cursor()
         cursor.execute("SELECT * FROM produtos")
         produtos = cursor.fetchall()
         print("produtos")
