@@ -28,16 +28,17 @@ def listar_produtos():
         cursor = conexao.cursor()
         cursor.execute("SELECT * FROM produtos")
         produtos = cursor.fetchall()
-        print("produtos")
         produtos_list = [{"id": p[0], "nomeProduto": p[1], "preco": p[2], "quantidade": p[3]} for p in produtos]
         return produtos_list, 200
     except Exception as erro:
-        return {"error": "artu"}, 500
+        print(f"Erro ao listar produtos: {erro}")  # Adicione esta linha
+        return {"error": str(erro)}, 500
     finally:
         if cursor:
             cursor.close()
         if conexao:
             conexao.close()
+
 
 
 def buscar_produto(id):
