@@ -20,8 +20,8 @@ def criar_conexao():
     conexao = mysql.connector.connect(
     host="autorack.proxy.rlwy.net",
     user="root",
-    password="sYSodsuOrbHrUGEVXOHfJaZTmfyTkiFh",
-    port=59906,
+    password="RDVrSZgVcbaHjVTmBvAlnhrmpOBfgmHR",
+    port=16864,
     database="railway"
 )
     cursor = conexao.cursor()
