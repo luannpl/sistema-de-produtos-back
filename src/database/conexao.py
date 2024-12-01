@@ -18,10 +18,10 @@ from src.database.tabelas import criar_tabelas
 def criar_conexao():
     # Criar uma conexão com o banco de dados
     conexao = mysql.connector.connect(
-    host="junction.proxy.rlwy.net",
+    host="autorack.proxy.rlwy.net",
     user="root",
-    password="UOhlaseowyczpaUnZpPhmMbfCsvfNSiC",
-    port=32461,
+    password="sYSodsuOrbHrUGEVXOHfJaZTmfyTkiFh",
+    port=59906,
     database="railway"
 )
     cursor = conexao.cursor()
